@@ -13,11 +13,13 @@ class Pessoa {
   string nome = null;
 
   //set 
-  public void envelhecer(){
+  public void envelhecer(int anos_maisvelho){
+
     if (idade < 21) {
-      altura += 0.5;
-    }  
-    idade++;
+      altura += anos_maisvelho*0.5;
+    }
+
+    idade +=anos_maisvelho;
   }
 
   public void engordar(double kg_amais){

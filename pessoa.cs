@@ -15,11 +15,11 @@ class Pessoa {
   //set 
   public void envelhecer(int anos_maisvelho){
 
-    if (idade < 21) {
+    if (idade < 21 && idade != 0) {
       altura += anos_maisvelho*0.5;
     }
 
-    idade +=anos_maisvelho;
+    idade += anos_maisvelho;
   }
 
   public void engordar(double kg_amais){
@@ -32,5 +32,26 @@ class Pessoa {
 
   public void crescer(double crescimento){
     altura += crescimento;
+  }
+
+  public void altera_nome(string new_name){
+    nome = new_name;
+  }
+
+  //get
+  public int getIdade(){
+    return idade;
+  }
+
+  public double getPeso(){
+    return peso;
+  }
+
+  public double getAltura(){
+    return altura;
+  }
+
+  public string getNome(){
+    return nome;
   }
 }

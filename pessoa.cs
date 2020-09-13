@@ -16,10 +16,12 @@ class Pessoa {
   public void envelhecer(int anos_maisvelho){
 
     if (idade < 21 && idade != 0) {
-      altura += anos_maisvelho*0.5;
+      for(int i=0;i<(anos_maisvelho-idade);i++){
+        altura += 0.05;
+      }
     }
 
-    idade += anos_maisvelho;
+    idade = anos_maisvelho;
   }
 
   public void engordar(double kg_amais){
